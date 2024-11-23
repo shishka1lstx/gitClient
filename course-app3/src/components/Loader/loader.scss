@@ -1,0 +1,35 @@
+@keyframes loader-spin{
+    from{
+      
+          transform: rotate(0deg);
+        }
+        to{
+          transform: rotate(360deg);
+          }
+    } 
+    
+    .loader{
+      transform: rotate(-58deg);
+      color: var(--brend);
+      border-radius: 50%;
+      border: solid currentColor 4.5px;
+      border-bottom: solid transparent 4.5px;
+    
+      width: 32px;
+      height: 32px;
+    
+      animation: loader-spin 2s linear infinite;
+    }
+    .loader.s{
+      border-width: 2.41px;
+      border-top-width: 2.41px;
+      height: 16px;
+      width: 16px;
+    }
+    
+    .loader.l{
+      border-width: 6.1px;
+      border-top-width: 6.1px;
+      height: 40px;
+      width: 40px;
+    }

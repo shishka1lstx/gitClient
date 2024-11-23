@@ -1,0 +1,86 @@
+:root{
+    --space-xs: 12px;
+    --sapce-s: 14px;
+    --space-m: 16px;
+    --space-l: 20px;
+    --space-xl: 24px;
+  
+    --text-color-primary: #000;
+    --text-color-secondary: #AFADB5;
+    --text-color-accent: #518581;
+    --card-bgc: #fff;
+    --input-text-disabled:#00000033;
+    --brend: #518581;
+    --brend-hover:#86AAA7;
+    --brend-active:#487773;
+    --brend-disabled: #D9D9D9;
+    --button-primary-text: #FFFFFF;
+  
+  
+}
+
+a {
+    text-decoration: none;
+    color: var(--brend);
+}
+
+.repoCard{
+    width: 350px;
+
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 5%;
+    background-color: #fff;
+    align-items: left;
+    justify-content: center;
+    overflow: hidden;
+    transition: 0.2s;
+}
+
+.repoCard:hover{
+    box-shadow: 0px 4px 10px 0px #00000040;
+}
+
+.repoCard__img-box{
+    width: 360px;
+    height: 360px;
+    overflow: hidden;
+}
+
+.repoCard__info{
+    text-align: left;
+    background-color: var(--card-bgc);
+    max-width: 360px;
+    padding-top: var(--space-xl);
+    padding-inline: var(--space-xs);
+    margin-bottom: 20px;
+}  
+
+.repoCard__text-box{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    column-gap: 15px;
+}
+
+.repoCard__title{
+    display: -webkit-box;        
+    -webkit-box-orient: vertical; 
+    overflow: hidden;      
+
+}
+
+.repoCard__avatar-img{
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.repoCard__owner-info{
+    color:#000;
+    display: flex;
+    align-items: center;
+}
