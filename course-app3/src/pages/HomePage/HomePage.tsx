@@ -4,15 +4,16 @@ import React from "react"
 
 
 export type homePageProps = {
-    user: string
+    
 }
 
 
 
-const HomePage: React.FC<homePageProps> = ({user}) =>{
+const HomePage: React.FC<homePageProps> = () =>{
     return(
         <React.Fragment>
-            
+            <SearchInput/>
+            <ReposList/>
         </React.Fragment>
     )
 }
