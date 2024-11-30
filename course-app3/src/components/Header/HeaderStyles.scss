@@ -1,0 +1,32 @@
+.header{
+    height: 64px;
+    min-width: 100%;
+
+    display: flex;
+    align-items: center;
+    padding-left: 12%;
+
+    background-color: transparent;
+    border-bottom: 2px #D9D9D9 solid;
+
+}
+
+.header__link{
+    color: black;
+    display: flex;
+    align-items: center;
+    column-gap: 24px;
+}
+
+.header__link-text{
+    color: currnetColor;
+    font-family: "roboto";
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    transition: 0.2s;
+}
+
+.header__link:hover{
+    color: #518581;
+}

@@ -11,7 +11,6 @@ const fetchRepos = async (username: string) => {
     method: 'get',
     url: `https://api.github.com/users/${username}`
   })
-  console.log(user.data);
   return [repos.data, user.data.html_url, user.data.avatar_url];
 
   };
