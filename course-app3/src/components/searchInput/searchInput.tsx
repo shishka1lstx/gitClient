@@ -26,7 +26,7 @@ const SearchInput: React.FC<SearchInputProps> = ({onInput}) => {
 
     return(
         <div className="searchInput">
-            <input type="text" className="searchInput__inner" 
+            <input placeholder='Enter organization name' type="text" className="searchInput__inner" 
             onKeyDownCapture={(e) => {
                 if(e.code == "Enter")  clickHandler(user)
             }}

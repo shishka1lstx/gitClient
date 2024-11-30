@@ -11,8 +11,13 @@
     height: 50px;
     background-color: #fff;
     outline: none;
-    border: 1px solid #08531D;
     border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.searchInput__inner:placeholder-shown{
+    color: lightgray;
 }
 
 .searchButton{
