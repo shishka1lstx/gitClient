@@ -1,0 +1,42 @@
+.typeSelector-body{
+    display: block;
+    justify-self: start;
+}
+
+.input-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 15px;
+    width: 300px;
+    height: 50px;
+    background-color: #fff;
+}
+
+.typeSelector__input{
+    width: 300px - 23px;
+    height: 50px;
+    background-color: transparent;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.typeSelector__options{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    box-shadow: 0px 4px 10px 0px #0000002f;
+}
+
+.typeSelector__options-item{
+    background-color: #fff;
+    border: none;
+    border-top: 0.5px solid #AFADB5;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100px;
+    height: 45px;    
+}

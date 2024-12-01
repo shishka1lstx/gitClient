@@ -5,6 +5,7 @@ import fetchRepos from '../../entities/repos';
 import RepoCard from '../../components/repoCard';
 import Loader from '../../components/Loader';
 import './reposList.css';
+import { useSearchTypeContext } from '../../pages/HomePage/HomePage';
 
 export type ReposListProps = { 
 };
@@ -13,14 +14,16 @@ const ReposList: React.FC<ReposListProps> = () => {
     const [repos, setRepos] = useState<any[]>([]);
     const loc = useLocation();
     const [error, setError] = useState(false);
+    const typeContext = useSearchTypeContext();
 
     useEffect(() => {
             const username = loc.pathname.slice(1 );
-            fetchRepos(username).then( (repos) => {
+            fetchRepos(username,typeContext.type ).then( (repos) => {
                 setRepos(repos);
                 setError(false);
             }).catch(() => setError(true)); 
-        }, [loc.pathname]);
+            console.log(typeContext.type);
+        }, [loc.pathname, typeContext.type ]);
 
    
 
