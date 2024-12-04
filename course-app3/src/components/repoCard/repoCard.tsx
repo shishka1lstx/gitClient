@@ -5,10 +5,11 @@ export type RepoCardProps = {
     stars: number,
     description: string,
     update_date: Date,
+    link_to_own_page: string
 }
 
 
-const RepoCard: React.FC<RepoCardProps> =  ({ stars, name, description, update_date}) => {
+const RepoCard: React.FC<RepoCardProps> =  ({ link_to_own_page, stars, name, description, update_date}) => {
     const date = new Date(update_date);
     const monthNames = [
         "January", "February", "March", 
@@ -21,7 +22,7 @@ const RepoCard: React.FC<RepoCardProps> =  ({ stars, name, description, update_d
 
     return(
      
-        <div className="repoCard">
+        <a href={`${link_to_own_page}`} className="repoCard">
             <div className="repoCard__img-box">
                 <img src={image} />
             </div>
@@ -46,7 +47,7 @@ const RepoCard: React.FC<RepoCardProps> =  ({ stars, name, description, update_d
 
                 </div>
             </div>
-        </div>
+        </a>
     )
 }
 

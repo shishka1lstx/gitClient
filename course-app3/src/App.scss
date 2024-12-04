@@ -1,12 +1,11 @@
 .app{
     padding: 0;
     margin: 0;
-    width: 100%;
+    max-width: 100vw;
     background-color: #F6F8FA;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+   
     margin-bottom: 30px;
 }
 
@@ -14,4 +13,8 @@ html, body{
     background-color: #F6F8FA;
     padding: 0;
     margin: 0;
+}
+
+.PageTitle{
+    margin-bottom: 0;
 }

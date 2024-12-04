@@ -17,6 +17,7 @@ const SearchModule = () => {
    
     return(
         <div className="searchModule">
+
             <TypeSelector value={'All'} options={options}></TypeSelector>
             <SearchInput/>
         </div>

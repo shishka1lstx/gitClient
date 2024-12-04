@@ -1,0 +1,53 @@
+.repoPage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+
+
+    &__wrapper{
+        width: 1280px;
+        margin-inline: auto ;
+        justify-content: start;
+    }
+}
+
+.links{
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    column-gap: 20px;
+
+    h1{
+        margin: 0;
+        font-size: 44px;
+    }
+}
+
+.original_repo-link{
+    text-decoration: underline;
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.topics__wrapper{
+    margin-top: 20px;
+    display: flex;
+    column-gap: 8px;
+}
+
+.repoPage__langAndContr{
+    margin-top: 20px;
+    display: flex;
+    align-items: start;
+    column-gap: 80px;
+}
+.readMe{
+    max-width: 1280px;
+    border: 1px solid black;
+    margin-top: 30px;
+    border-radius: 20px;
+    padding-inline: 15px;
+}

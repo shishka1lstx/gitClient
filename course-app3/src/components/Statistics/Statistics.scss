@@ -1,0 +1,24 @@
+li{
+    list-style-type: none;
+}
+
+.statistics{
+    &__list{
+        display: flex;
+        flex-direction: column;
+        row-gap: 8px;
+        padding: 0;
+    margin-bottom: 0;
+
+
+        &-item{
+
+            display: flex;
+            column-gap: 10px;
+            align-items: center;
+            color:#AFADB5;
+        }
+    }
+
+    
+}

@@ -13,27 +13,40 @@ export type ReposListProps = {
 const ReposList: React.FC<ReposListProps> = () => {
     const [repos, setRepos] = useState<any[]>([]);
     const loc = useLocation();
+    // const [langs, setLangs] = useState({});
     const [error, setError] = useState(false);
-    const typeContext = useSearchTypeContext();
+    const typeFilterContext = useSearchTypeContext();
 
-    useEffect(() => {
-            const username = loc.pathname.slice(1 );
-            fetchRepos(username,typeContext.type ).then( (repos) => {
-                setRepos(repos);
-                setError(false);
-            }).catch(() => setError(true)); 
-            console.log(typeContext.type);
-        }, [loc.pathname, typeContext.type ]);
 
-   
+
+        useEffect(() => {
+            const fetchData = async () => {
+                const username = loc.pathname.slice(1);
+                try {
+
+                    const repos = await fetchRepos(username, typeFilterContext.type);
+                    setRepos(repos);
+                    setError(false);
+                   
+                } catch (error) {
+
+                    setError(true);
+
+                }
+            };
+        
+            fetchData();
+        }, [loc.pathname, typeFilterContext.type]);
 
     return(
         <React.Fragment>
             <div className="reposList">
-                { (error == true)? (<span>404</span>): 
+                { 
+                (error == true)? (<span>404</span>): 
                     ( repos.length > 0 )  ?
                         ( repos.map( (repo) => ( 
                         <RepoCard  
+                            link_to_own_page={`${loc.pathname}/${repo.name}`}
                             key={repo.id} 
                             stars={repo.stargazers_count}
                             update_date={repo.updated_at} 

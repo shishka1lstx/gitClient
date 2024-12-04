@@ -1,8 +1,9 @@
 import ReposList from "../../modules/reposList"
-import { useLocation } from "react-router-dom"
-import React, { createContext, useContext, useEffect, useState } from "react"
+import React, { createContext, useContext,  useState } from "react"
 import Text from "../../components/text"
 import SearchModule from "../../modules/searchModule"
+import './HomePage.scss'
+
 
 export type homePageProps = {
     
@@ -24,23 +25,18 @@ export const useSearchTypeContext = () => useContext(searchTypeContext);
 
 const HomePage: React.FC<homePageProps> = ({}) =>{
 
-    const [username, setUsername] = useState('');
     const [type, setType] = useState('all')
-    let location = useLocation().pathname;
     
-    useEffect( () => {
-        setUsername(location.slice(1));
-    }, [location])
    
     return(
         <React.Fragment>
+            
             <Provider value={{type, setType}}>
-                <Text view="title" >{`List of organization repositories`}</Text>
-                <SearchModule/>
-                {
-                (username && <Text view="p-20" >{`${username}'s repositories:`}</Text>)
-                }
-                <ReposList/>
+                <div className="HomePage__wrapper">
+                    <Text view="title" className='PageTitle' >{`List of organization repositories`}</Text>
+                    <SearchModule/>
+                    <ReposList/>
+                </div>
             </Provider>
         </React.Fragment>
             

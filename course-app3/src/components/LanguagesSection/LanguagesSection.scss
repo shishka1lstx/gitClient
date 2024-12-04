@@ -1,0 +1,50 @@
+
+.langBar{
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    font-size: 14px;
+    justify-content: start;
+    &__bar{
+        width: 300px;
+        height: 10px;
+        display: flex;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+    &__langPart{
+        margin-right: 3px ;
+        height: 100%;
+    }
+    
+    &__langPart:last-of-type {
+        margin: 0px ;
+        height: 100%;
+    }
+    
+    &__stats{
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 6px;
+        
+        &-item{
+            height: 18px;
+            display: flex;
+            align-items: center;
+            column-gap: 4px;
+
+            span{
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+            }
+
+            p{
+                color: rgb(161, 159, 159)
+            }
+        }
+    }
+
+}
+

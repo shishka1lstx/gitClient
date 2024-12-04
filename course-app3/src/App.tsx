@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Route, Routes, } from 'react-router-dom'
 import { useState,  createContext, useContext } from 'react'
 import HomePage from './pages/HomePage'
-import SearchInput from './components/searchInput'
 import Header from './components/Header'
-import './App.css'
+import './App.scss'
+import RepoPage from './pages/RepoPage'
 
 
 
@@ -31,8 +31,9 @@ function App() {
         <Router>
           <Header/>
           <Routes>
-            <Route path='/' element={<SearchInput/>}/>
-            <Route path='/:username' element={<HomePage/>}/>
+            <Route path='/' element={<HomePage/>} />
+            <Route path={'/:username' } element={<HomePage/>}/>
+            <Route path='/:username/:repoName' element={<RepoPage />}/>
           </Routes>
         </Router>
       </div>

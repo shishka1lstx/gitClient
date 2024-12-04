@@ -4,7 +4,9 @@
     --text-color-accent: #518581;
 }
 
-
+.text{
+  margin: 0px;
+}
 .text.title{
     font-family: Roboto;
     font-size: 44px;
